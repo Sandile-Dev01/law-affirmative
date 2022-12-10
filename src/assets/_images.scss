@@ -1,0 +1,42 @@
+@use '../colors/colors' as *;
+@use '../mixin/mixin' as *;
+
+$intro-background: url(https://www.rd.com/wp-content/uploads/2018/11/14-Secrets-Lawyers-Will-Never-Tell-You-8.jpg?fit=700,467);
+$feedback-bg: url(https://images.ctfassets.net/pdf29us7flmy/nFQzlQRFpWdpAaVgN1bUV/7b4dc7d3b728810c8194555f759e8e3d/motivational_interview_GettyImages-1142966869-red_.jpg?w=720&q=100&fm=jpg);
+
+.sidebar-img{
+    @include img-presets();
+}
+
+@media (min-width: 0px){
+
+    .sidebar-img{
+        display: none;
+    }
+}
+
+@media (min-width: 576px){
+
+    .sidebar-img{
+        @include image-settings();
+    }
+}
+
+//Services
+.services-img{
+    @include img-presets();
+}
+
+@media (min-width: 0px){
+
+    .services-img{
+        display: none;
+    }
+}
+
+@media (min-width: 576px){
+
+    .services-img{
+        @include image-settings();
+    }
+}

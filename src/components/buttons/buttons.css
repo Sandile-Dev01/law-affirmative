@@ -1,0 +1,28 @@
+.btn {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    margin-top: 0.5em;
+    border-radius: 0;
+    border: none;
+    font-size: 1.5ch;
+    font-weight: bold;
+    color: #000000;
+    background-color: #d5be9b;
+    cursor: pointer;
+    transition: transform 300ms ease-in-out;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: #fdd301;
+  }
+
+  @media (min-width: 0px) {
+  .btn {
+    width: 50vw;
+  }
+}
+@media (min-width: 576px) {
+  .btn {
+    width: 15vw;
+  }
+}
+  

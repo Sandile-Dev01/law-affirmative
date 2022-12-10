@@ -1,0 +1,501 @@
+
+:root{
+
+  /* color */
+
+  --dark-gold: #c89c59;
+  --light-gold: #FBF8FF;
+  --basic-gold: #d5be9b;
+  --accent: #fdd301;
+
+--navy: #000000;
+
+--shadow: 0.1em 0.2em 0.5em 0.2em rgba(87, 87, 87, 0.608),
+        0.1em 0.2em 0.2em 0.2em rgba(128, 128, 128, 0.738),
+        0.1em 0.2em rgba(7, 50, 152, 0.414);
+
+--nav-shadow: 0.05em 0.05em 0.2em 0.05em #fdd301,
+              0.1em 0.2em 0.5em 0.2em #000000;
+
+  /* fonts */
+
+  --primary--ff: 'Kdam Thmor Pro', sans-serif;
+--secondary--ff: 'Merriweather', serif;
+--tertiary--ff: 'Arial', cursive;
+
+--space-em: 0.5em;
+--primary-fs: 1.5ch;
+--mid-fs: 1.5em;
+--secondary-fs: 4em;
+--span-fs: 1.2em;
+
+--space: 1.7em;
+--spaced-out: 5em;
+}
+
+*,
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-family: --secondary--ff;
+}
+
+div{
+    display: inline-block;
+}
+
+h1 {
+    font-family: --primary--ff;
+}
+
+@media (max-width: 400px) {
+  .nav-links-section {
+    line-height: 0;
+  }
+}
+
+.sidebar-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  box-shadow: 0.1em 0.2em 0.5em 0.2em rgba(87, 87, 87, 0.608), 0.1em 0.2em 0.2em 0.2em rgba(128, 128, 128, 0.738), 0.1em 0.2em rgba(7, 50, 152, 0.414);
+}
+
+@media (min-width: 0px) {
+  .sidebar-img {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .sidebar-img {
+    display: inline-block;
+    width: 25vw;
+    height: 65vh;
+  }
+}
+.services-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  box-shadow: 0.1em 0.2em 0.5em 0.2em rgba(87, 87, 87, 0.608), 0.1em 0.2em 0.2em 0.2em rgba(128, 128, 128, 0.738), 0.1em 0.2em rgba(7, 50, 152, 0.414);
+}
+
+@media (min-width: 0px) {
+  .services-img {
+    display: none;
+  }
+}
+@media (min-width: 576px) {
+  .services-img {
+    display: inline-block;
+    width: 25vw;
+    height: 65vh;
+  }
+}
+
+.sidebar {
+  height: 50%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -2%;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-shadow: 0.05em 0.05em 0.2em 0.05em #fdd301, 0.1em 0.2em 0.5em 0.2em #000000;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 2ch;
+  color: #d5be9b;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #fdd301;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #fdd301;
+  color: #000000;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  color: #fdd301;
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+
+.law-container {
+  min-height: 80vh;
+  background-color: #FBF8FF;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1em;
+}
+.law-container .law-sub-container h1 {
+  text-align: center;
+  font-weight: bold;
+}
+.law-container .law-sub-container h4 {
+  text-align: center;
+  font-family: "Arial", cursive;
+  font-size: 1.2em;
+  font-weight: lighter;
+  line-height: 1;
+}
+.law-container .law-sub-container,
+.law-container .law-sub-container h1 {
+  line-height: 1;
+  color: #000000;
+}
+
+@media (min-width: 0px) {
+  .law-container {
+    flex-wrap: wrap;
+  }
+  .law-container h1 {
+    font-size: 7ch;
+    order: -2;
+  }
+  .law-container .law-sub-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 576px) {
+  .law-container .law-sub-container {
+    width: 35vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .law-container .law-sub-container h1 {
+    font-size: 10ch;
+  }
+}
+
+.services-section {
+  background: #FBF8FF;
+  min-height: 50vh;
+  width: 100%;
+}
+.services-section .services-sub-section h1 {
+  color: #000000;
+  font-weight: bold;
+  font-size: 10ch;
+}
+.services-section .services-sub-section p,
+.services-section .services-sub-section li {
+  font-size: 1.5ch;
+}
+
+@media (min-width: 0px) {
+  .services-section {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .services-section .services-sub-section h1 {
+    text-align: center;
+    font-size: 7.5ch;
+    font-weight: bold;
+  }
+}
+@media (min-width: 576px) {
+  .services-section {
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+  }
+  .services-section .services-sub-section {
+    width: 35vw;
+  }
+  .services-section .services-sub-section p,
+.services-section .services-sub-section li {
+    font-size: 2ch;
+  }
+}
+.practices-section {
+  min-height: 50vh;
+  padding: 0;
+  width: 100%;
+  padding: 0.5em 0;
+  background-color: #FBF8FF;
+}
+.practices-section h1 {
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  font-size: 7.5ch;
+}
+.practices-section .practices-sub-section .practices {
+  display: inline-block;
+  padding: 3em 2em;
+}
+.practices-section .practices-sub-section .practices:nth-child(1) {
+  background: #f1e3ce;
+}
+.practices-section .practices-sub-section .practices:nth-child(2) {
+  background: #d5be9b;
+}
+.practices-section .practices-sub-section .practices:nth-child(3) {
+  background: #c89c59;
+}
+.practices-section .practices-sub-section .practices h2 {
+  color: #000000;
+  font-weight: bold;
+}
+.practices-section .practices-sub-section p {
+  font-family: "Arial", cursive;
+  font-weight: lighter;
+  line-height: 1.6;
+}
+
+@media (min-width: 0px) {
+  .practices-section .practices-sub-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .practices-section .practices-sub-section .practices {
+    width: 85%;
+  }
+}
+@media (min-width: 576px) {
+  .practices-section .practices-sub-section {
+    flex-direction: row;
+    justify-content: end;
+    align-content: center;
+  }
+  .practices-section .practices-sub-section .practices {
+    width: 30vw;
+  }
+}
+.feedback-section {
+  width: 100%;
+  position: relative;
+  height: 50%;
+  background-image: url(https://images.ctfassets.net/pdf29us7flmy/nFQzlQRFpWdpAaVgN1bUV/7b4dc7d3b728810c8194555f759e8e3d/motivational_interview_GettyImages-1142966869-red_.jpg?w=720&q=100&fm=jpg);
+  background-attachment: fixed;
+  padding: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+}
+.feedback-section .feedback-sub-section {
+  display: flex;
+  align-items: center;
+}
+.feedback-section h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  color: #c89c59;
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 7.5ch;
+}
+.feedback-section h4 {
+  text-align: center;
+  color: #fdd301;
+}
+.feedback-section::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: rgba(0, 1, 5, 0.962);
+  opacity: 0.9;
+}
+
+.feedback {
+  padding: 0.5em;
+  border: 0.25em solid #fdd301;
+  font-size: 1ch;
+  margin: 1em;
+}
+.feedback p {
+  color: #FBF8FF;
+}
+.feedback small {
+  color: #d5be9b;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  font-size: 2.5ch;
+}
+
+@media (min-width: 0px) {
+  .feedback-section .feedback {
+    width: 85%;
+  }
+  .feedback-section h4 {
+    font-size: 1.5ch;
+  }
+  .feedback-section p {
+    font-size: 2.5ch;
+  }
+  .feedback-section .feedback-sub-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 576px) {
+  .feedback-section .feedback {
+    width: 20%;
+  }
+  .feedback-section h4 {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 2.2ch;
+  }
+  .feedback-section p {
+    font-size: 3ch;
+  }
+  .feedback-section .feedback-sub-section {
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+.contact-us-section {
+  background-color: #FBF8FF;
+  width: 100%;
+}
+.contact-us-section .contact-us-sub-section {
+  display: flex;
+}
+.contact-us-section i {
+  color: #c89c59;
+}
+.contact-us-section .fa-facebook,
+.contact-us-section .fa-twitter,
+.contact-us-section .fa-instagram {
+  cursor: pointer;
+  transition: transform 300ms ease-out;
+}
+.contact-us-section .fa-facebook:hover,
+.contact-us-section .fa-twitter:hover,
+.contact-us-section .fa-instagram:hover {
+  color: #000000;
+  transform: rotate(10deg);
+}
+.contact-us-section .contact-section {
+  display: block;
+  color: #000000;
+  padding: 0.5em;
+}
+.contact-us-section .contact-section:nth-child(1) {
+  line-height: 2.3;
+}
+.contact-us-section .contact-section:nth-child(2) {
+  line-height: 0.7;
+}
+.contact-us-section .contact-section h2 {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+.contact-us-section .contact-section span {
+  font-family: "Merriweather", serif;
+}
+.contact-us-section .contact-section .day {
+  color: #c89c59;
+}
+.contact-us-section .contact-section .day .time {
+  color: #000000;
+}
+.contact-us-section .contact-section .contact-header {
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-size: 1.5ch;
+  font-weight: bold;
+  padding-right: 1%;
+}
+
+@media (min-width: 0px) {
+  .contact-us-section .contact-section {
+    width: 75%;
+  }
+  .contact-us-section i {
+    font-size: 6.5vw;
+  }
+  .contact-us-section h2 {
+    margin-top: 0.5em;
+    text-align: center;
+    font-size: 4ch;
+  }
+  .contact-us-section p {
+    font-size: 2ch;
+  }
+  .contact-us-section .contact-us-sub-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 576px) {
+  .contact-us-section {
+    padding: 3em;
+  }
+  .contact-us-section .contact-section {
+    width: 50%;
+  }
+  .contact-us-section h2 {
+    text-align: start;
+  }
+  .contact-us-section i {
+    font-size: 2.2ch;
+  }
+  .contact-us-section .contact-us-sub-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-family: "Merriweather", serif;
+}
+
+div {
+  display: inline-block;
+}
+
+h1 {
+  font-family: "Kdam Thmor Pro", sans-serif;
+}/*# sourceMappingURL=styles.css.map */

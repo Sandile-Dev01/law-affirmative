@@ -1,0 +1,41 @@
+@use '../colors/colors' as *;
+
+@mixin viewPort($height, $padding){
+    min-height: $height;
+    padding: $padding;
+}
+
+@mixin positioning($top, $left){
+    top: $top;
+    left: $left;
+    width: 25%;
+    padding: 0.5em;
+    position: absolute;
+}
+
+@mixin background(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    isolation: isolate;
+}
+
+@mixin transparent-bg(){
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: rgba(0, 1, 5, 0.962);
+    opacity: 0.9;
+}
+
+@mixin img-presets(){
+    object-fit: cover;
+    padding: 0;
+    box-shadow: $shadow;
+}
+
+@mixin image-settings(){
+    display: inline-block;
+    width: 25vw;
+    height: 65vh;
+}

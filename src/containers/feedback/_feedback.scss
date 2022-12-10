@@ -1,0 +1,102 @@
+@use "../colors/colors" as *;
+@use "../fonts/fonts" as *;
+@use "../images/images" as *;
+@use "../mixin/mixin" as *;
+
+//Feedback
+.feedback-section {
+    width: 100%;
+    position: relative;
+    height: 50%;
+    background-image: $feedback-bg;
+    background-attachment: fixed;
+    padding: 1.5em;
+
+    .feedback-sub-section{
+        display: flex;
+        align-items: center;
+    }
+
+    h1{
+        text-align: center;
+        font-weight: bold;
+        font-size: $secondary-fs;
+        color: $dark-gold;
+        font-family: $primary--ff;
+        font-size: 7.5ch;
+    }
+
+    h4 {
+        text-align: center;
+        color: $accent;
+    }
+
+    @include background();
+
+    &::after{
+        @include transparent-bg();
+    }  
+}
+
+.feedback {
+    padding: $space-em;
+    border: 0.25em solid $accent;
+    font-size: 1ch;
+    margin: 1em;
+
+    p{
+        color: $light-gold;
+    }
+    
+    small{
+        color: $basic-gold;
+        font-family: $secondary--ff;
+        font-weight: bold;
+        font-size: 2.5ch;
+        }
+    }
+
+    @media (min-width: 0px){
+        .feedback-section{
+
+            .feedback{
+                width: 85%;
+            }
+
+            h4{
+                font-size: 1.5ch;
+            }
+
+            p{
+                font-size: 2.5ch;
+            }
+
+            .feedback-sub-section{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media (min-width: 576px){
+        .feedback-section{
+
+            .feedback{
+                width: 20%;
+            }
+
+            h4{
+                font-family: $primary--ff;
+                font-size: 2.2ch;
+            }
+
+            p{
+                font-size: 3ch;
+            }
+
+            .feedback-sub-section{
+                justify-content: center;
+                flex-direction: row;
+            }
+        }
+    }

@@ -1,0 +1,121 @@
+@use "../colors/colors" as *;
+@use "../fonts/fonts" as *;
+
+//Contact
+.contact-us-section{
+    background-color: $light-gold;
+    width: 100%;
+
+    .contact-us-sub-section{
+        display: flex;
+    }
+    
+    i{
+        color: $dark-gold;
+    }
+
+    .fa-facebook,
+    .fa-twitter,
+    .fa-instagram{
+            cursor: pointer;
+            transition: transform 300ms ease-out;
+
+            &:hover{
+                color: $navy;
+                transform: rotate(10deg);
+            }
+        }
+
+    .contact-section{
+        display: block;
+        color: $navy;
+        padding: 0.5em;
+
+        &:nth-child(1){
+            line-height: 2.3;
+        };
+
+        &:nth-child(2){
+            line-height: 0.7;
+        }
+        
+        h2
+        {
+            font-family: $primary--ff;
+            font-weight: bold;
+            color: $navy;
+        }
+
+        span
+        {
+            font-family: $secondary--ff;
+        }
+
+        .day{
+            color: $dark-gold;
+
+            .time{
+                color: $navy;
+            }
+        }
+
+        .contact-header{
+            font-family: $primary--ff;
+            font-size: 1.5ch;
+            font-weight: bold;
+            padding-right: 1%;
+        }
+    }
+}
+
+@media (min-width: 0px){
+    .contact-us-section{
+
+        .contact-section{
+            width: 75%;
+        }
+
+        i{
+            font-size: 6.5vw;
+        }
+
+        h2{
+            margin-top: 0.5em;
+            text-align: center;
+            font-size: 4ch;
+        }
+
+        p{
+            font-size: 2ch;
+            
+        }
+
+        .contact-us-sub-section{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: 576px){
+    .contact-us-section{
+        padding: 3em;
+
+        .contact-section{
+            width: 50%;
+        }
+
+        h2{
+            text-align: start;
+        }
+
+        i{
+            font-size: 2.2ch;
+        }
+
+        .contact-us-sub-section{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

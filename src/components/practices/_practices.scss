@@ -1,0 +1,78 @@
+@use "../colors/colors" as *;
+@use "../fonts/fonts" as *;
+@use "../mixin/mixin" as *;
+
+//Practices
+.practices-section {
+
+    @include viewPort(50vh, 0);
+    width: 100%;
+    padding: 0.5em 0;
+    background-color: $light-gold;
+
+    h1 {
+        text-align: center;
+        color: $navy;
+        font-weight: bold;
+        font-size: 7.5ch;
+    }
+
+    .practices-sub-section {
+
+        .practices{
+            display: inline-block;
+            padding: 3em 2em;
+
+            &:nth-child(1) {
+                background: #f1e3ce;
+            };
+
+            &:nth-child(2) {
+                background: $basic-gold;
+            };
+
+            &:nth-child(3) {
+                background: $dark-gold;
+            }
+
+            h2{
+                color: $navy;
+                font-weight: bold;
+            }
+        }
+
+        p{
+            font-family: $tertiary--ff;
+            font-weight: lighter;
+            line-height: 1.6;
+        }
+    }
+}
+
+@media (min-width: 0px){
+    .practices-section{
+        .practices-sub-section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .practices{
+                width: 85%;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px){
+    .practices-section{
+        .practices-sub-section{
+            flex-direction: row;
+            justify-content: end;
+            align-content: center;
+
+            .practices{
+                width: 30vw;
+            }
+        }
+    }
+}

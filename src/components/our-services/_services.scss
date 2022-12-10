@@ -1,0 +1,57 @@
+@use "../colors/colors" as *;
+@use "../fonts/fonts" as *;
+
+//Services
+.services-section {
+    background: $light-gold;
+    min-height: 50vh;
+    width: 100%;
+
+    .services-sub-section{
+
+        h1 {
+            color: $navy;
+            font-weight: bold;
+            font-size: 10ch;
+        }
+    
+        p,
+        li {
+            font-size: $primary-fs;
+        }
+    }
+}
+
+@media (min-width: 0px){
+    .services-section{
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .services-sub-section{
+            h1{
+                text-align: center;
+                font-size: 7.5ch;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px){
+    .services-section{
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+
+        .services-sub-section{
+            width: 35vw;
+
+            p,
+            li{
+                font-size: 2ch;
+            }
+        }
+    }
+}
